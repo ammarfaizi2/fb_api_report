@@ -1,15 +1,20 @@
 # Login
--Method			: `POST`
--URL			: `http://localhost:8000/index.php?method=login`
--Content Type	: `application/json`
+- Method			: `POST`
 
--Fields			: 	1. `email` (string), your facebook email or username.
+
+- URL			: `http://localhost:8000/index.php?method=login`
+
+
+- Content Type	: `application/json`
+
+
+- Fields			: 	1. `email` (string), your facebook email or username.
 					2. `password` (string), your facebook password.
 
--Result			:	1. `login_status`, the status of your login action.
+- Result			:	1. `login_status`, the status of your login action.
 					2. `next`, the URL to continue your session.
 
--Example		: 
+- Example		: 
 ```php
 $ch = curl_init("http://localhost:8000/index.php?method=login");
 curl_setopt_array($ch, 
@@ -29,7 +34,7 @@ $info = curl_getinfo($ch);
 curl_close($ch);
 ```
 
--Example result:
+- Response:
 ```json
 {
     "msg": {
