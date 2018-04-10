@@ -17,8 +17,8 @@
 ## Response Messages
 |Field|Type|Description|
 |-----|-----|----------|
-|login_status|string| Your login action status |
-|next|string| An URL to continue your login session (only available when login_status is success)|
+|`login_status`|string| Your login action status |
+|`next`|string| An URL to continue your login session (only available when login_status is success)|
 
 
 ## Raw Request Data Example
@@ -68,8 +68,9 @@ print($out);
 ```
 
 
-This documentation is vague? Please contact the developer!
-Contact:
-Facebook <a href="https://www.facebook.com/ammarfaizi2">Ammar Faizi</a>
-Telegram <a href="https://t.me/ammarfaizi2">Ammar F.</a>
-SMS/Telp <a href="tel:+6285867152777">085867152777</a>
+#### This documentation is vague? Please contact the developer!
+
+### Contact:
+- Facebook <a href="https://www.facebook.com/ammarfaizi2?ref=github">Ammar Faizi</a>
+- Telegram <a href="https://t.me/ammarfaizi2">Ammar F.</a>
+- SMS/Telp <a href="tel:+6285867152777">+6285867152777</a> (Indonesia)
