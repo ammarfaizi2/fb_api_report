@@ -6,12 +6,13 @@
 |URL| http://localhost:8000/index.php?method=login |
 |Method| POST |
 |Content Type| application/json|
+|Description|This method uses for initializing the facebook session for the first action. You must perform this method to login to your facebook account before continue to the next method.|
 
 ## Request
-|Field|Type|Description|
-|----|----|---------|
-|`email`|string| Your facebook email or username |
-|`password`|string| Your facebook password |
+|Field|Type|Required|Description|
+|----|----|-------|---------|
+|`email`|string| yes |Your facebook email or username |
+|`password`|string| yes |Your facebook password |
 
 
 ## Response Messages
@@ -27,7 +28,6 @@
     "email": "ammarfaizi2@gmail.com",
     "password": "password123123"
 }
-
 ```
 
 
@@ -64,7 +64,6 @@ $info = curl_getinfo($ch);
 curl_close($ch);
 
 print($out);
-
 ```
 
 

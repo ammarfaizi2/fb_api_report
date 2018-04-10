@@ -34,8 +34,19 @@ class ReportApi
 					Login::run($data["email"], $data["password"]);
 					break;
 				case 'report':
-					if (! isset($data["profile"])) {
-						# code...
+					if (! isset($_GET["session"])) {
+						self::error("Please provide a session to perform this method");
+					}
+					if (! file_exists(cookie_dir."/".$_GET["session"])) {
+						self::error("Invalid session ".$_GET["session"]);
+					}
+					if (! isset($data["username"])) {
+						self::error("Please provide a username");
+					}
+					if ($reportUrl = Report::checkProfile($data["username"])) {
+						Report::next($reportUrl);
+					} else {
+						s($data["username"]." is not reportable or invalid profile", 400);
 					}
 					break;
 				default:

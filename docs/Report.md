@@ -1,24 +1,45 @@
 # Report
-- Method			: `POST`
 
-- URL			: `http://localhost:8000/index.php?method=report`
+## Method Info
+|Name|Value|
+|-----|------|
+|URL| http://localhost:8000/index.php?method=report&session=your_session |
+|Method| POST |
+|Content Type| application/json|
+|Description|This method uses for report a facebook profile. You must have a session to perform this method.|
 
-- Content Type	: `application/json`
+## Request
+|Field|Type|Required|Description|
+|----|----|----|-----|
+|`username`|string| yes |Target facebook username or facebook ID |
+|`report_code`|int| yes | The reason of your report. See report code for the option |
 
-- Fields			: 	
-	1. `target` (string), the facebook username or facebook id of target.
-	2. ``
+## Report Code
+|Code| Reason |
+|----|--------|
+|1|This person is annoying me|
+|2|They're pretending to be me or someone I know|
+|3|This is a fake account|
+|4|This profile represents a business or organization|
+|5|They're using a different name than they use in everyday life|
 
-- Result			:
-	1. `login_status`(string), the status of your login action. 
-	2. `next` (string), the URL to continue your session.
 
-- Example		: 
-```php
+## Response Messages
+|Field|Type|Description|
+|-----|-----|----------|
+|	|	|
 
+
+## Raw Request Data Example
+```json
+{
+    "email": "ammarfaizi2@gmail.com",
+    "password": "password123123"
+}
 ```
 
-- Response:
+
+## Raw Response Data Example
 ```json
 {
     "msg": {
@@ -28,3 +49,35 @@
     "code": 200
 }
 ```
+
+## PHP Code Example
+```php
+<?php
+
+$ch = curl_init("http://localhost:8000/index.php?method=login");
+curl_setopt_array($ch, 
+	[
+		CURLOPT_RETURNTRANSFER => true,
+		CURLOPT_POST => true,
+		CURLOPT_POSTFIELDS => json_encode(
+			[
+				"email" => "ammarfaizi2@gmail.com",
+				"password" => "password123123"
+			]
+		)
+	]
+);
+$out = curl_exec($ch);
+$info = curl_getinfo($ch);
+curl_close($ch);
+
+print($out);
+```
+
+
+#### This documentation is vague? Please contact the developer!
+
+### Contact:
+- Facebook <a href="https://www.facebook.com/ammarfaizi2?ref=github">Ammar Faizi</a>
+- Telegram <a href="https://t.me/ammarfaizi2">Ammar F.</a>
+- SMS/Telp <a href="tel:+6285867152777">+6285867152777</a> (Indonesia)
