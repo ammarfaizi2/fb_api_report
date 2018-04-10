@@ -2,4 +2,4 @@
 
 require __DIR__."/../vendor/autoload.php";
 
-Facebook\ReportAPI::run();
+Facebook\ReportApi::run();
