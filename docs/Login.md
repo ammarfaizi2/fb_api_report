@@ -37,7 +37,8 @@
         "next": "http://localhost:8000/?method=report&session=c5e33b33877a2702f96a44f16bd219a2efd215f2"
     },
     "code": 200
-}```
+}
+```
 
 ## PHP Code Example
 ```php
