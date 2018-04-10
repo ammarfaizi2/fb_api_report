@@ -1,0 +1,11 @@
+{
+    "name": "ammarfaizi2/fb_api_report",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ammar Faizi",
+            "email": "ammarfaizi2@gmail.com"
+        }
+    ],
+    "require": {}
+}
