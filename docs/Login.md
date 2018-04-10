@@ -1,4 +1,6 @@
 # Login
+
+## Method Info
 |Name|Value|
 |-----|------|
 |URL| http://localhost:8000/index.php?method=login |
@@ -64,3 +66,10 @@ curl_close($ch);
 print($out);
 
 ```
+
+
+This documentation is vague? Please contact the developer!
+Contact:
+Facebook <a href="https://www.facebook.com/ammarfaizi2">Ammar Faizi</a>
+Telegram <a href="https://t.me/ammarfaizi2">Ammar F.</a>
+SMS/Telp <a href="tel:+6285867152777">085867152777</a>
