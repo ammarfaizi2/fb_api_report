@@ -15,6 +15,7 @@
 
 - Example		: 
 ```php
+<?php
 $ch = curl_init("http://localhost:8000/index.php?method=login");
 curl_setopt_array($ch, 
 	[
