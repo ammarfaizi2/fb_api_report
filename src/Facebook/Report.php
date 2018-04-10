@@ -4,7 +4,8 @@ namespace Facebook;
 
 class Report
 {
-	public function checkProfile()
+
+	public function checkProfile($data)
 	{
 		
 	}

@@ -34,7 +34,9 @@ class ReportApi
 					Login::run($data["email"], $data["password"]);
 					break;
 				case 'report':
-						Report::init($data);
+					if (! isset($data["profile"])) {
+						# code...
+					}
 					break;
 				default:
 					self::error("Method ".$_GET["method"]." not found!");
