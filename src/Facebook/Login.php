@@ -52,6 +52,13 @@ class Login
 					"next" => urlgen()."?method=report&session=".$cookie
 				], 200);
 			} else {
+				if (preg_match("/checkpoint/", $cx["info"]["url"])) {
+					s([
+						"login_status" => "failed",
+						"next" => null,
+						"message" => "You got a checkpoint for this login, please check it up by login from your browser."
+					], 400);
+				}
 				s([
 					"login_status" => "failed",
 					"next" => null

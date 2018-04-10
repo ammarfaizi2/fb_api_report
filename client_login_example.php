@@ -7,7 +7,7 @@ curl_setopt_array($ch,
 		CURLOPT_POST => true,
 		CURLOPT_POSTFIELDS => json_encode(
 			[
-				"email" => "ammarfaizi93@gmail.com",
+				"email" => "ammarfaizi2@gmail.com",
 				"password" => "password123"
 			]
 		)
