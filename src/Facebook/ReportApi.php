@@ -2,6 +2,11 @@
 
 namespace Facebook;
 
+/**
+ * @author Ammar Faizi <ammarfaizi2@gmail.com>
+ * @license MIT
+ * @version 0.0.1
+ */
 class ReportApi
 {
 	public static function run()
@@ -43,8 +48,14 @@ class ReportApi
 					if (! isset($data["username"])) {
 						self::error("Please provide a username");
 					}
+					if (! isset($data["report_code"])) {
+						self::error("Please provide a report_code");
+					}
+					if (! in_array($data["report_code"], range(1, 5))) {
+						self::error("Invalid report code");
+					}
 					if ($reportUrl = Report::checkProfile($data["username"])) {
-						Report::next($reportUrl);
+						Report::next($reportUrl, $data["report_code"]);
 					} else {
 						s($data["username"]." is not reportable or invalid profile", 400);
 					}

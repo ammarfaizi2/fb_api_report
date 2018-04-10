@@ -11,15 +11,15 @@
 ## Request
 |Field|Type|Required|Description|
 |----|----|-------|---------|
-|`email`|string| yes |Your facebook email or username |
-|`password`|string| yes |Your facebook password |
+|`email`|string| yes |Your facebook email or username. |
+|`password`|string| yes |Your facebook password. |
 
 
 ## Response Messages
 |Field|Type|Description|
 |-----|-----|----------|
-|`login_status`|string| Your login action status |
-|`next`|string| An URL to continue your login session (only available when login_status is success)|
+|`login_status`|string| Your login action status. |
+|`next`|string| An URL to continue your login session (only available when login_status is success).|
 
 
 ## Raw Request Data Example

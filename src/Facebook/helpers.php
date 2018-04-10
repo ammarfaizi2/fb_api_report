@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @author Ammar Faizi <ammarfaizi2@gmail.com>
+ * @license MIT
+ * @version 0.0.1
+ */
 function urlgen()
 {
 	if (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] == "on") {
@@ -35,7 +40,7 @@ function x($url, $opt = [])
 	];
 }
 
-function s($msg, $code) 
+function s($msg, $code = 200) 
 {
 	header("Content-type:application/json");
 	http_response_code($code);

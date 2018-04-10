@@ -2,6 +2,11 @@
 
 namespace Facebook;
 
+/**
+ * @author Ammar Faizi <ammarfaizi2@gmail.com>
+ * @license MIT
+ * @version 0.0.1
+ */
 class Login
 {
 	public static function run($email, $pass)
